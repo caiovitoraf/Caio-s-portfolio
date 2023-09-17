@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #dbe0f4;
+            text-align: center;
+            margin: 20px;
+            padding: 10px;
+        }
+
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .portfolio img {
+            max-width: 17%;
+            height: auto;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sketches</h1>
+    <p>made from 2020 to 2023</p>
+    <div class="portfolio">
+        
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            function resizeImages() {
+                $('.portfolio img').each(function () {
+                    var containerWidth = $(this).parent().width();
+                    $(this).css('height', 'auto');
+                    var imgHeight = $(this).height();
+                    $(this).css('width', containerWidth);
+                    $(this).css('height', imgHeight);
+                });
+            }
+
+            resizeImages();
+            $(window).resize(resizeImages);
+        });
+        var dir = "C:/Users/caiov/OneDrive/Área de Trabalho/site/Portfolio";
+
+        var allowedExtensions = ["jpg", "png", "gif"];
+
+        var portfolio = document.getElementById("portfolio");
+
+        function listImages() {
+            fetchImages(dir, allowedExtensions).forEach(function (imagePath) {
+                var img = document.createElement("img");
+                img.src = imagePath;
+                img.alt = "Imagem";
+                portfolio.appendChild(img);
+            });
+        }
+
+        function fetchImages(directory, extensions) {
+            return extensions.flatMap(function (ext) {
+                return fetch(directory + "/*." + ext)
+                    .then(function (response) {
+                        if (response.ok) {
+                            return response.blob().then(function (blob) {
+                                return URL.createObjectURL(blob);
+                            });
+                        }
+                        return [];
+                    })
+                    .catch(function (error) {
+                        console.error(error);
+                        return [];
+                    });
+            });
+        }
+
+        listImages();
+    </script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
+      
+        const firebaseConfig = {
+          apiKey: "AIzaSyBzYJXxB01DNqxog0YB8iWLCy7xEn7RQKY",
+          authDomain: "portfolio-717ac.firebaseapp.com",
+          projectId: "portfolio-717ac",
+          storageBucket: "portfolio-717ac.appspot.com",
+          messagingSenderId: "133347869872",
+          appId: "1:133347869872:web:b7fdeb784afc84130fa775",
+          measurementId: "G-EX7R7TTRCP"
+        };
+      
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+</body>
+
+</html>

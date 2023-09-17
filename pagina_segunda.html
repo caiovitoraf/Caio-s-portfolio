@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #dbe0f4;
+            text-align: center;
+            margin: 20px;
+            padding: 10px;
+        }
+
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .portfolio img {
+            max-width: 17%;
+            height: auto;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pictures</h1>
+    <p>made from 2020 to 2023</p>
+    <div class="portfolio">
+        <iframe src="listarfotos.php" frameborder="0" width="100%" height="400"></iframe>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            function resizeImages() {
+                $('.portfolio img').each(function () {
+                    var containerWidth = $(this).parent().width();
+                    $(this).css('height', 'auto');
+                    var imgHeight = $(this).height();
+                    $(this).css('width', containerWidth);
+                    $(this).css('height', imgHeight);
+                });
+            }
+
+            resizeImages();
+            $(window).resize(resizeImages);
+        });
+    </script>
+</body>
+
+</html>
