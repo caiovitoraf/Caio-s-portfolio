@@ -21,88 +21,116 @@
         }
 
         .portfolio img {
-            max-width: 17%;
+            max-width: 10%;
             height: auto;
             margin: 5px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .zoomed-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .zoomed-image img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: scale-down;
+            border: 30px solid #fff;
+            box-sizing: border-box;
         }
     </style>
 </head>
 
 <body>
+
     <h1>Sketches</h1>
     <p>made from 2020 to 2023</p>
     <div class="portfolio">
-        
+        <img src="Portfolio/20230130_142331.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfolio/20230530_143705.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfolio/20230710_203913.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfolio/20230710_205801.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfolio/20230712_182856.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfolio/20230817_143311(1).jpg" alt="missing art" class="zoomable" />
+        <img src="Portfolio/20230817_143311.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfolio/2d rasc (2).png" alt="missing art" class="zoomable" />
+        <img src="Portfolio/balaclava3.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfolio/batamFINAL.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfolio/bel02 (2).jpg" alt="missing art" class="zoomable" />
+        <img src="Portfolio/caio.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfolio/caiooo1.png" alt="missing art" class="zoomable" />
+        <img src="Portfolio/erenpaintNEW1.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfolio/GG.GE.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfolio/giogio.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfolio/glzme(1).jpg" alt="missing art" class="zoomable" />
+        <img src="Portfolio/glzme.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfolio/ilustAcad.png" alt="missing art" class="zoomable" />
+        <img src="Portfolio/Ilustração.png" alt="missing art" class="zoomable" />
+        <img src="Portfolio/Ilustração10.png" alt="missing art" class="zoomable" />
+        <img src="Portfolio/Ilustração15 (1).png" alt="missing art" class="zoomable" />
+        <img src="Portfolio/Ilustração2 (1).png" alt="missing art" class="zoomable" />
+        <img src="Portfolio/Ilustração6 (1).png" alt="missing art" class="zoomable" />
+        <img src="Portfolio/Ilustração7.png" alt="missing art" class="zoomable" />
+        <img src="Portfolio/Ilustração9 (2).png" alt="missing art" class="zoomable" />
+        <img src="Portfolio/IMG_20200607_215905924.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfolio/lumberjack.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfolio/OHTOAI.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfolio/rohanteste.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfolio/TETSUO.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfolio/WLPP (2).jpg" alt="missing art" class="zoomable" />
+        <img src="novaspics/CamScanner 18-09-2023 12.47_1.jpg" alt="missing art" class="zoomable" />
+        <img src="novaspics/CamScanner 18-09-2023 12.49_1.jpg" alt="missing art" class="zoomable" />
+        <img src="novaspics/CamScanner 18-09-2023 12.50 (1)_1.jpg" alt="missing art" class="zoomable" />
+        <img src="novaspics/CamScanner 18-09-2023 12.50_1.jpg" alt="missing art" class="zoomable" />
+        <img src="novaspics/CamScanner 18-09-2023 12.51_1.jpg" alt="missing art" class="zoomable" />
+        <img src="novaspics/CamScanner 18-09-2023 12.52_1.jpg" alt="missing art" class="zoomable" />
+        <img src="novaspics/CamScanner 18-09-2023 12.53_1.jpg" alt="missing art" class="zoomable" />
+        <img src="novaspics/CamScanner 18-09-2023 12.54_1.jpg" alt="missing art" class="zoomable" />
+        <img src="novaspics/CamScanner 18-09-2023 12.55 (1)_1.jpg" alt="missing art" class="zoomable" />
+        <img src="novaspics/CamScanner 18-09-2023 12.56_1.jpg" alt="missing art" class="zoomable" />
+        <img src="novaspics/CamScanner 18-09-2023 12.57_1.jpg" alt="missing art" class="zoomable" />
+        <img src="novaspics/CamScanner 18-09-2023 12.58 (1)_1.jpg" alt="missing art" class="zoomable" />
+        <img src="novaspics/CamScanner 18-09-2023 12.58_1.jpg" alt="missing art" class="zoomable" />
+        <img src="novaspics/CamScanner 18-09-2023 12.59_1.jpg" alt="missing art" class="zoomable" />
+        <img src="novaspics/CamScanner 18-09-2023 13.00_1.jpg" alt="missing art" class="zoomable" />
+        <img src="novaspics/CamScanner 18-09-2023 13.01_1.jpg" alt="missing art" class="zoomable" />
+        <img src="novaspics/CamScanner 18-09-2023 13.02 (1)_1.jpg" alt="missing art" class="zoomable" />
+        <img src="novaspics/CamScanner 18-09-2023 13.02_1.jpg" alt="missing art" class="zoomable" />
+        <img src="novaspics/CamScanner 18-09-2023 13.03_1.jpg" alt="missing art" class="zoomable" />
+        <img src="novaspics/CamScanner 18-09-2023 13.04 (1)_1.jpg" alt="missing art" class="zoomable" />
+        <img src="novaspics/CamScanner 18-09-2023 13.04_1.jpg" alt="missing art" class="zoomable" />
+        <img src="novaspics/CamScanner 18-09-2023 13.05_1.jpg" alt="missing art" class="zoomable" />
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <div class="zoomed-image" id="zoomed-image">
+        <img src="" alt="Zoomed Image" id="zoomed-img" />
+    </div>
     <script>
-        $(document).ready(function () {
-            function resizeImages() {
-                $('.portfolio img').each(function () {
-                    var containerWidth = $(this).parent().width();
-                    $(this).css('height', 'auto');
-                    var imgHeight = $(this).height();
-                    $(this).css('width', containerWidth);
-                    $(this).css('height', imgHeight);
-                });
-            }
+        const images = document.querySelectorAll(".zoomable");
+        const zoomedImage = document.getElementById("zoomed-image");
+        const zoomedImg = document.getElementById("zoomed-img");
 
-            resizeImages();
-            $(window).resize(resizeImages);
+        images.forEach((img) => {
+            img.addEventListener("click", () => {
+                zoomedImage.style.display = "flex";
+                zoomedImg.src = img.src;
+            });
         });
-        var dir = "C:/Users/caiov/OneDrive/Área de Trabalho/site/Portfolio";
 
-        var allowedExtensions = ["jpg", "png", "gif"];
-
-        var portfolio = document.getElementById("portfolio");
-
-        function listImages() {
-            fetchImages(dir, allowedExtensions).forEach(function (imagePath) {
-                var img = document.createElement("img");
-                img.src = imagePath;
-                img.alt = "Imagem";
-                portfolio.appendChild(img);
-            });
-        }
-
-        function fetchImages(directory, extensions) {
-            return extensions.flatMap(function (ext) {
-                return fetch(directory + "/*." + ext)
-                    .then(function (response) {
-                        if (response.ok) {
-                            return response.blob().then(function (blob) {
-                                return URL.createObjectURL(blob);
-                            });
-                        }
-                        return [];
-                    })
-                    .catch(function (error) {
-                        console.error(error);
-                        return [];
-                    });
-            });
-        }
-
-        listImages();
+        zoomedImage.addEventListener("click", () => {
+            zoomedImage.style.display = "none";
+        });
     </script>
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
-      
-        const firebaseConfig = {
-          apiKey: "AIzaSyBzYJXxB01DNqxog0YB8iWLCy7xEn7RQKY",
-          authDomain: "portfolio-717ac.firebaseapp.com",
-          projectId: "portfolio-717ac",
-          storageBucket: "portfolio-717ac.appspot.com",
-          messagingSenderId: "133347869872",
-          appId: "1:133347869872:web:b7fdeb784afc84130fa775",
-          measurementId: "G-EX7R7TTRCP"
-        };
-      
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-      </script>
+
 </body>
 
 </html>

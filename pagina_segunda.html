@@ -21,37 +21,142 @@
         }
 
         .portfolio img {
-            max-width: 17%;
+            max-width: 10%;
             height: auto;
             margin: 5px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .zoomed-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .zoomed-image img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: scale-down;
+            border: 30px solid #fff;
+            box-sizing: border-box;
         }
     </style>
 </head>
 
 <body>
+
     <h1>Pictures</h1>
     <p>made from 2020 to 2023</p>
     <div class="portfolio">
-        <iframe src="listarfotos.php" frameborder="0" width="100%" height="400"></iframe>
+        <img src="Portfólio - fotografia/20 anos (1).jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/2020-06-24 06.52.08.013.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/2020-06-24 06.52.08.168.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20220730_175231.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20220813_200338 (1).jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20220826_225754 (1).jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20220827_100805.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20220829_094045.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20220915_075655.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20220919_102236.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20220921_095406.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20221008_110726 (1).jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20221014_185422 (1).jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20221015_143750.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20221017_175002.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20221017_181659.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20221112_105449.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20221112_112131.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20221112_115634.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230208_161025 (1).jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230217_100904.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230221_182940.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230224_192948 (1).jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230302_122014 (1).jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230302_172427.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230306_175113.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230307_171156 (3)~2.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230323_122803.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230405_090232.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230421_130257.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230421_132639.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230421_143444.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230421_154435 (1).jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230421_175111 (1).jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230501_114110.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230501_114300.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230510_113314.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230524_160527.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230524_160607.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230524_160715.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230531_181600.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230607_123109.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230610_163035.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230611_181101.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230616_171442.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230620_115147.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230621_112718.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230708_111517.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230730_140706.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230804_175251.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230812_224628 (1).jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230819_170415 (2).jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/20230907_134005.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/DSC_0151.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/DSC_0190.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/DSC_0200.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/DSC_0207 (1).jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/DSC_0215.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/DSC_0216.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/DSC_0248 (1).jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/DSC_0285.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/DSC_0308.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/DSC_0448.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/DSC_0485 (1).jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/DSC_0573.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/DSC_0586.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/DSC_0743.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/DSC_0753.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/IMG_20210613_162614661_HDR.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/IMG_9745.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/P1050045.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/P1050123.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/P1050144.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/P1050181.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/P1050202.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/P1050215.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/P1050259 (2) (1).jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/P1050261.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/P1050263.jpg" alt="missing art" class="zoomable" />
+        <img src="Portfólio - fotografia/P1050266 (1).jpg" alt="missing art" class="zoomable" />
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <div class="zoomed-image" id="zoomed-image">
+        <img src="" alt="Zoomed Image" id="zoomed-img" />
+    </div>
     <script>
-        $(document).ready(function () {
-            function resizeImages() {
-                $('.portfolio img').each(function () {
-                    var containerWidth = $(this).parent().width();
-                    $(this).css('height', 'auto');
-                    var imgHeight = $(this).height();
-                    $(this).css('width', containerWidth);
-                    $(this).css('height', imgHeight);
-                });
-            }
+        const images = document.querySelectorAll(".zoomable");
+        const zoomedImage = document.getElementById("zoomed-image");
+        const zoomedImg = document.getElementById("zoomed-img");
 
-            resizeImages();
-            $(window).resize(resizeImages);
+        images.forEach((img) => {
+            img.addEventListener("click", () => {
+                zoomedImage.style.display = "flex";
+                zoomedImg.src = img.src;
+            });
+        });
+
+        zoomedImage.addEventListener("click", () => {
+            zoomedImage.style.display = "none";
         });
     </script>
+
 </body>
 
 </html>
