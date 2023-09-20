@@ -125,11 +125,10 @@
             font-size: 18px;
         }
 
-        .folder-container {
+        /* .folder-container {
             display: flex;
             justify-content: space-between;
             margin-top: 0px;
-            
         }
 
         .folder {
@@ -137,7 +136,22 @@
             cursor: pointer;
             transition: transform 0.2s;
             position: relative;
+        } */
+
+        .folder-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* Isso cria uma grade com 2 colunas */
+            gap: 20px;
+            /* Espaçamento entre os itens */
         }
+
+        .folder {
+            position: relative;
+            overflow: hidden;
+            /* Isso garante que o overlay não se estenda fora da imagem */
+        }
+
 
         .folder:hover {
             transform: scale(1);
@@ -152,7 +166,7 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            color: #1d1a19 
+            color: #1d1a19
         }
 
         .folder.right p {
@@ -172,7 +186,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -185,6 +199,8 @@
         .overlay-text {
             color: #fff;
             font-size: 20px;
+            margin: 0;
+            padding: 0;
         }
 
         .folder:hover .overlay {
@@ -205,16 +221,63 @@
             font-family: 'DM Serif Display', serif;
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const folderContainer = document.querySelector('.folder-container');
+
+            // Fazer uma solicitação ao servidor para obter a lista de arquivos da pasta 'pics'
+            fetch('/getFiles')
+                .then(response => response.json())
+                .then(files => {
+                    files.forEach(file => {
+                        const folderDiv = document.createElement('div');
+                        folderDiv.classList.add('folder');
+
+                        const anchor = document.createElement('a');
+                        anchor.href = "pagina_art.html";
+
+                        const img = document.createElement('img');
+                        img.src = `pics/${file}`;
+                        img.alt = "Descrição da imagem";
+                        img.height = 500;
+                        img.width = 500;
+
+                        anchor.appendChild(img);
+                        folderDiv.appendChild(anchor);
+
+                        const p = document.createElement('p');
+                        p.textContent = `${file}`;
+                        folderDiv.appendChild(p);
+
+                        const overlayDiv = document.createElement('div');
+                        overlayDiv.classList.add('overlay');
+
+                        const overlayText = document.createElement('p');
+                        overlayText.classList.add('overlay-text');
+                        overlayText.textContent = "Clique para ver mais";
+                        overlayDiv.appendChild(overlayText);
+
+                        folderDiv.appendChild(overlayDiv);
+
+                        folderContainer.appendChild(folderDiv);
+                    });
+                })
+                .catch(error => console.error(error));
+        });
+    </script>
 </head>
 
 <body>
     <div class="portfolio-container">
-        <img src="pics/IMG_6239(1).jpg" alt="Imagem Centralizada" width="300" height="300">
+        <img src="pics/novo ME.jpg" alt="Imagem Centralizada" width="300" height="300">
         <h1 class="portfolio-title">
-            <a href="pagina_caio_vitor.html">
-            <span class="caio">CAIO</span> <span class="vitor">VITOR</span>
-        </a>
+            <span class="caio">CAIO</span>
+            <span class="vitor">VITOR</span>
         </h1>
+        <div class="social-media">
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a> |
+            <a href="#">Instagram</a>
         </div>
     </div>
 
@@ -225,7 +288,7 @@
             </a>
             <p>ArtBoard</p>
             <div class="overlay">
-                <p class="overlay-text">.</p>
+                <p class="overlay-text">Clique para ver mais</p>
             </div>
         </div>
         <div class="folder right">
@@ -234,10 +297,14 @@
             </a>
             <p>PhotoBook</p>
             <div class="overlay">
-                <p class="overlay-text">.</p>
+                <p class="overlay-text">Clique para ver mais</p>
             </div>
         </div>
     </div>
+
+    <div class="folder-container">
+    </div>
+
 
 </body>
 <footer>
