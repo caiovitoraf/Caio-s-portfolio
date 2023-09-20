@@ -122,13 +122,16 @@
         }
 
         .social-media {
-            font-size: 18px;
+            font-size: 20px;
+            color: #dbe0f4;
+
         }
 
-        /* .folder-container {
+        .folder-container {
             display: flex;
             justify-content: space-between;
             margin-top: 0px;
+
         }
 
         .folder {
@@ -136,25 +139,12 @@
             cursor: pointer;
             transition: transform 0.2s;
             position: relative;
-        } */
 
-        .folder-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            /* Isso cria uma grade com 2 colunas */
-            gap: 20px;
-            /* Espaçamento entre os itens */
         }
-
-        .folder {
-            position: relative;
-            overflow: hidden;
-            /* Isso garante que o overlay não se estenda fora da imagem */
-        }
-
 
         .folder:hover {
             transform: scale(1);
+
         }
 
         .folder.left p {
@@ -225,7 +215,6 @@
         document.addEventListener("DOMContentLoaded", function () {
             const folderContainer = document.querySelector('.folder-container');
 
-            // Fazer uma solicitação ao servidor para obter a lista de arquivos da pasta 'pics'
             fetch('/getFiles')
                 .then(response => response.json())
                 .then(files => {
@@ -269,16 +258,13 @@
 
 <body>
     <div class="portfolio-container">
-        <img src="pics/novo ME.jpg" alt="Imagem Centralizada" width="300" height="300">
+        <img src="pics/IMG_6239(1).jpg" alt="Imagem Centralizada" width="300" height="300">
         <h1 class="portfolio-title">
-            <span class="caio">CAIO</span>
-            <span class="vitor">VITOR</span>
+            <a href="pagina_caio_vitor.html">
+                <span class="caio">CAIO</span> <span class="vitor">VITOR</span>
+            </a>
         </h1>
-        <div class="social-media">
-            <a href="#">Facebook</a> |
-            <a href="#">Twitter</a> |
-            <a href="#">Instagram</a>
-        </div>
+        <a class="social-media" href= "https://github.com/caiovitoraf">Github</a>
     </div>
 
     <div class="folder-container">
@@ -288,7 +274,7 @@
             </a>
             <p>ArtBoard</p>
             <div class="overlay">
-                <p class="overlay-text">Clique para ver mais</p>
+                <p class="overlay-text"> </p>
             </div>
         </div>
         <div class="folder right">
@@ -297,15 +283,14 @@
             </a>
             <p>PhotoBook</p>
             <div class="overlay">
-                <p class="overlay-text">Clique para ver mais</p>
+                <p class="overlay-text"> </p>
             </div>
         </div>
     </div>
 
     <div class="folder-container">
     </div>
-
-
+    
 </body>
 <footer>
     <p>@ Developed by Caio</p>
