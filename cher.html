@@ -211,49 +211,6 @@
             font-family: 'DM Serif Display', serif;
         }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const folderContainer = document.querySelector('.folder-container');
-
-            fetch('/getFiles')
-                .then(response => response.json())
-                .then(files => {
-                    files.forEach(file => {
-                        const folderDiv = document.createElement('div');
-                        folderDiv.classList.add('folder');
-
-                        const anchor = document.createElement('a');
-                        anchor.href = "pagina_art.html";
-
-                        const img = document.createElement('img');
-                        img.src = `pics/${file}`;
-                        img.alt = "Descrição da imagem";
-                        img.height = 500;
-                        img.width = 500;
-
-                        anchor.appendChild(img);
-                        folderDiv.appendChild(anchor);
-
-                        const p = document.createElement('p');
-                        p.textContent = `${file}`;
-                        folderDiv.appendChild(p);
-
-                        const overlayDiv = document.createElement('div');
-                        overlayDiv.classList.add('overlay');
-
-                        const overlayText = document.createElement('p');
-                        overlayText.classList.add('overlay-text');
-                        overlayText.textContent = "Clique para ver mais";
-                        overlayDiv.appendChild(overlayText);
-
-                        folderDiv.appendChild(overlayDiv);
-
-                        folderContainer.appendChild(folderDiv);
-                    });
-                })
-                .catch(error => console.error(error));
-        });
-    </script>
 </head>
 
 <body>
